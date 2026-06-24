@@ -4,9 +4,9 @@
 
 Neste desafio você vai transformar a transcrição de uma reunião técnica em um pacote completo de design docs, usando IA como ferramenta principal de produção.
 
-**Cenário:** uma empresa que opera um Order Management System (OMS) em produção vai construir uma nova feature — um Sistema de Webhooks de Notificação de Pedidos. A decisão técnica já foi tomada em uma reunião entre tech lead, PM, engenheiros e segurança, mas nada foi registrado além da transcrição da call (`TRANSCRICAO.md`).
+**Cenário:** uma empresa que opera um Order Management System (OMS) em produção vai construir uma nova feature, um Sistema de Webhooks de Notificação de Pedidos. A decisão técnica já foi tomada em uma reunião entre tech lead, PM, engenheiros e segurança, mas nada foi registrado além da transcrição da call (`TRANSCRICAO.md`).
 
-**Sua tarefa:** produzir, a partir da transcrição e do código existente, a documentação técnica da feature — em nível acionável o suficiente para o time de engenharia iniciar a implementação.
+**Sua tarefa:** produzir, a partir da transcrição e do código existente, a documentação técnica da feature, em nível acionável o suficiente para o time de engenharia iniciar a implementação.
 
 ## Sobre o uso de IA
 
@@ -16,8 +16,8 @@ A IA é sua ferramenta principal de produção neste desafio. Você vai usá-la 
 
 O desafio tem duas partes, **ambas obrigatórias**:
 
-- **Parte 1 — Pacote de design docs:** produzir PRD, RFC, FDD, ADRs, Tracker e o README do processo a partir da transcrição e do código.
-- **Parte 2 — Documentação viva em HTML:** transformar o pacote em documentação que se mantém sincronizada com o código via IA. É a etapa final e mais técnica, e se constrói sobre a Parte 1.
+- **Parte 1 (Pacote de design docs):** produzir PRD, RFC, FDD, ADRs, Tracker e o README do processo a partir da transcrição e do código.
+- **Parte 2 (Documentação viva em HTML):** transformar o pacote em documentação que se mantém sincronizada com o código via IA. É a etapa final e mais técnica, e se constrói sobre a Parte 1.
 
 Conclua a Parte 1 antes de começar a Parte 2. Os requisitos e critérios de aceite numerados a seguir são da Parte 1; a Parte 2 tem seção e critérios próprios, mais adiante.
 
@@ -37,10 +37,10 @@ Toda informação registrada nos documentos deve ser rastreável à transcriçã
 
 ### O pacote de documentos e o papel de cada um
 
-Os documentos não se repetem: cada um opera em uma **altura** diferente. Antes de produzir, entenda a fronteira entre eles — conteúdo duplicado entre documentos é sinal de que algo está no lugar errado.
+Os documentos não se repetem: cada um opera em uma **altura** diferente. Antes de produzir, entenda a fronteira entre eles: conteúdo duplicado entre documentos é sinal de que algo está no lugar errado.
 
 | Documento | Papel | Altura | Pergunta que responde |
-| --------- | ----- | ------ | --------------------- |
+| --- | --- | --- | --- |
 | **PRD** | Problema, público, escopo e métricas de sucesso | Produto / negócio | *Por que e o quê?* |
 | **RFC** | Proposta técnica da solução para revisão: abordagem geral, alternativas e questões em aberto | Arquitetura | *Como pretendemos resolver, e o que ainda está em aberto?* |
 | **ADRs** | Cada decisão arquitetural isolada, com contexto e consequências | Decisão pontual | *Por que decidimos exatamente assim?* |
@@ -71,7 +71,7 @@ Liberdade total na escolha de ferramentas de IA. Você pode usar qualquer combin
 
 Os documentos devem ser entregues em formato Markdown.
 
-Na **Parte 1**, a entrega é puramente documental: você não deve mexer no código da aplicação (`src/`, `prisma/`, `tests/`, configurações). O código serve de contexto e referência. A **Parte 2** tem uma exceção controlada e fornecida pelo próprio desafio — descrita na seção dela — e libera a criação de *tooling de documentação* (scripts, GitHub Actions, prompts, gerador de HTML), que não é código da aplicação.
+Na **Parte 1**, a entrega é puramente documental: você não deve mexer no código da aplicação (`src/`, `prisma/`, `tests/`, configurações). O código serve de contexto e referência. A **Parte 2** tem uma exceção controlada e fornecida pelo próprio desafio (descrita na seção dela) e libera a criação de *tooling de documentação* (scripts, GitHub Actions, prompts, gerador de HTML), que não é código da aplicação.
 
 ## Requisitos
 
@@ -96,9 +96,9 @@ A seção "Fora de escopo" deve listar explicitamente pelo menos 2 itens descart
 
 ### 2. RFC da feature
 
-Produza o arquivo `docs/RFC.md` com a proposta técnica da solução, no formato de um documento submetido à equipe para revisão. O RFC opera em nível de arquitetura: apresenta a abordagem escolhida, as alternativas que foram colocadas na mesa e as questões deixadas em aberto. É um documento conciso (2 a 4 páginas) — o detalhamento de implementação fica no FDD. Deve seguir o formato apresentado no curso e incluir, no mínimo:
+Produza o arquivo `docs/RFC.md` com a proposta técnica da solução, no formato de um documento submetido à equipe para revisão. O RFC opera em nível de arquitetura: apresenta a abordagem escolhida, as alternativas que foram colocadas na mesa e as questões deixadas em aberto. É um documento conciso (2 a 4 páginas); o detalhamento de implementação fica no FDD. Deve seguir o formato apresentado no curso e incluir, no mínimo:
 
-- Metadados (autor, status, data, revisores) — use os participantes da reunião como revisores
+- Metadados (autor, status, data, revisores); use os participantes da reunião como revisores
 - Resumo executivo (TL;DR) da proposta
 - Contexto e problema
 - Proposta técnica (visão geral da solução, sem descer ao detalhe de implementação do FDD)
@@ -155,7 +155,8 @@ O tracker não é um conceito padrão do mercado nem é um documento abordado di
 Formato obrigatório da tabela:
 
 | ID | Documento | Tipo | Conteúdo (resumo) | Fonte | Localização |
-| -- | --------- | ---- | ----------------- | ----- | ----------- |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
 
 Onde:
 
@@ -174,12 +175,14 @@ O `README.md` na raiz do repositório base contém este enunciado. Substitua o c
 
 Estrutura obrigatória do novo README:
 
-- **Sobre o desafio**: 1-2 parágrafos descrevendo a tarefa em suas palavras
+- **Sobre o desafio**: 1 a 2 parágrafos descrevendo a tarefa em suas palavras
 - **Ferramentas de IA utilizadas**: lista das ferramentas que você usou, com breve nota sobre o papel de cada uma
 - **Workflow adotado**: como você organizou o trabalho. Em que ordem produziu os documentos, como organizou a interação com a IA
 - **Prompts customizados**: pelo menos 2 prompts relevantes que você escreveu ou adaptou, mostrados em blocos de código
 - **Iterações e ajustes**: descreva os principais momentos em que a IA gerou algo errado ou superficial e você teve que corrigir. Quantas iterações principais até chegar ao resultado final
 - **Como navegar a entrega**: caminho dos arquivos entregues e ordem sugerida de leitura
+
+---
 
 ## Critérios de Aceite
 
@@ -187,65 +190,67 @@ A entrega é avaliada contra os critérios abaixo. Todos são obrigatórios.
 
 ### PRD (`docs/PRD.md`)
 
-- [ ] Arquivo existe e está em Markdown
-- [ ] Contém todas as seções obrigatórias listadas no requisito 1
-- [ ] Identifica no mínimo 8 requisitos funcionais discutidos na reunião
-- [ ] Inclui pelo menos 1 objetivo com métrica e meta quantitativa
-- [ ] Seção "Fora de escopo" lista pelo menos 2 itens explicitamente descartados ou adiados na reunião
-- [ ] Seção "Riscos" inclui pelo menos 2 riscos com probabilidade, impacto e mitigação
+- ☐ Arquivo existe e está em Markdown
+- ☐ Contém todas as seções obrigatórias listadas no requisito 1
+- ☐ Identifica no mínimo 8 requisitos funcionais discutidos na reunião
+- ☐ Inclui pelo menos 1 objetivo com métrica e meta quantitativa
+- ☐ Seção "Fora de escopo" lista pelo menos 2 itens explicitamente descartados ou adiados na reunião
+- ☐ Seção "Riscos" inclui pelo menos 2 riscos com probabilidade, impacto e mitigação
 
 ### RFC (`docs/RFC.md`)
 
-- [ ] Arquivo existe e está em Markdown
-- [ ] Contém todas as seções obrigatórias listadas no requisito 2
-- [ ] Seção "Alternativas consideradas" lista pelo menos 2 alternativas descartadas na reunião, cada uma com o trade-off que motivou o descarte
-- [ ] Seção "Questões em aberto" lista pelo menos 2 pontos adiados ou não decididos na reunião
-- [ ] Referencia, com link, pelo menos 2 ADRs do pacote
+- ☐ Arquivo existe e está em Markdown
+- ☐ Contém todas as seções obrigatórias listadas no requisito 2
+- ☐ Seção "Alternativas consideradas" lista pelo menos 2 alternativas descartadas na reunião, cada uma com o trade-off que motivou o descarte
+- ☐ Seção "Questões em aberto" lista pelo menos 2 pontos adiados ou não decididos na reunião
+- ☐ Referencia, com link, pelo menos 2 ADRs do pacote
 
 ### FDD (`docs/FDD.md`)
 
-- [ ] Arquivo existe e está em Markdown
-- [ ] Contém todas as seções obrigatórias listadas no requisito 3
-- [ ] Seção "Contratos públicos" inclui pelo menos 4 endpoints HTTP com payload de exemplo (request e response) e status codes
-- [ ] Matriz de erros usa códigos com prefixo `WEBHOOK_`
-- [ ] Seção "Integração com o sistema existente" referencia pelo menos 4 caminhos de arquivo reais do código base
-- [ ] Seção "Observabilidade" cita métricas, logs e tracing
+- ☐ Arquivo existe e está em Markdown
+- ☐ Contém todas as seções obrigatórias listadas no requisito 3
+- ☐ Seção "Contratos públicos" inclui pelo menos 4 endpoints HTTP com payload de exemplo (request e response) e status codes
+- ☐ Matriz de erros usa códigos com prefixo `WEBHOOK_`
+- ☐ Seção "Integração com o sistema existente" referencia pelo menos 4 caminhos de arquivo reais do código base
+- ☐ Seção "Observabilidade" cita métricas, logs e tracing
 
 ### ADRs (`docs/adrs/ADR-NNN-*.md`)
 
-- [ ] Pasta `docs/adrs/` contém entre 5 e 8 arquivos no formato `ADR-NNN-titulo-em-kebab-case.md`
-- [ ] Cada ADR contém as seções Status, Contexto, Decisão, Alternativas Consideradas, Consequências
-- [ ] O conjunto cobre pelo menos 5 das 6 decisões principais listadas no requisito 4
-- [ ] Pelo menos 1 ADR referencia explicitamente arquivos, módulos ou classes do código base
+- ☐ Pasta `docs/adrs/` contém entre 5 e 8 arquivos no formato `ADR-NNN-titulo-em-kebab-case.md`
+- ☐ Cada ADR contém as seções Status, Contexto, Decisão, Alternativas Consideradas, Consequências
+- ☐ O conjunto cobre pelo menos 5 das 6 decisões principais listadas no requisito 4
+- ☐ Pelo menos 1 ADR referencia explicitamente arquivos, módulos ou classes do código base
 
 ### Tracker (`docs/TRACKER.md`)
 
-- [ ] Arquivo existe e segue o formato de tabela definido no requisito 5
-- [ ] Pelo menos 80% dos itens identificáveis dos documentos têm linha correspondente
-- [ ] Pelo menos 70% das linhas têm Fonte = `TRANSCRICAO` com timestamp válido no formato `[hh:mm] Nome`
-- [ ] Pelo menos 5 linhas têm Fonte = `CODIGO` com caminho de arquivo real
+- ☐ Arquivo existe e segue o formato de tabela definido no requisito 5
+- ☐ Pelo menos 80% dos itens identificáveis dos documentos têm linha correspondente
+- ☐ Pelo menos 70% das linhas têm Fonte = `TRANSCRICAO` com timestamp válido no formato `[hh:mm] Nome`
+- ☐ Pelo menos 5 linhas têm Fonte = `CODIGO` com caminho de arquivo real
 
 ### README (`README.md`)
 
-- [ ] Contém todas as seções obrigatórias listadas no requisito 6
-- [ ] Lista pelo menos 1 ferramenta de IA utilizada
-- [ ] Mostra pelo menos 2 prompts customizados em blocos de código
-- [ ] Descreve pelo menos 2 iterações ou ajustes concretos feitos durante a produção
+- ☐ Contém todas as seções obrigatórias listadas no requisito 6
+- ☐ Lista pelo menos 1 ferramenta de IA utilizada
+- ☐ Mostra pelo menos 2 prompts customizados em blocos de código
+- ☐ Descreve pelo menos 2 iterações ou ajustes concretos feitos durante a produção
 
 ### Consistência geral
 
-- [ ] Nenhum requisito, decisão ou restrição registrada nos documentos contradiz a transcrição ou o código
-- [ ] Nenhum arquivo de código mencionado nos documentos é inexistente no repositório
+- ☐ Nenhum requisito, decisão ou restrição registrada nos documentos contradiz a transcrição ou o código
+- ☐ Nenhum arquivo de código mencionado nos documentos é inexistente no repositório
 
-## Parte 2 — Documentação Viva em HTML
+---
+
+## Parte 2: Documentação Viva em HTML
 
 > Esta é a etapa final do desafio e a mais técnica. Ela se constrói sobre o pacote da Parte 1, então só comece depois que a Parte 1 estiver completa e consistente.
 
 ### Objetivo
 
-Design docs envelhecem: o código muda e os documentos ficam para trás. Nesta parte você vai construir um mecanismo que mantém a documentação sincronizada com o código usando IA. O entregável tem **três artefatos concretos** e uma **demonstração**, descritos abaixo com exatidão — não há margem para interpretação sobre o que é esperado.
+Design docs envelhecem: o código muda e os documentos ficam para trás. Nesta parte você vai construir um mecanismo que mantém a documentação sincronizada com o código usando IA. O entregável tem **três artefatos concretos** e uma **demonstração**, descritos abaixo com exatidão; não há margem para interpretação sobre o que é esperado.
 
-### Artefato 1 — Documentação em HTML (`docs/site/`)
+### Artefato 1: Documentação em HTML (`docs/site/`)
 
 Uma versão navegável em HTML do pacote da Parte 1, em `docs/site/`:
 
@@ -253,7 +258,7 @@ Uma versão navegável em HTML do pacote da Parte 1, em `docs/site/`:
 - Cobre os cinco documentos: PRD, RFC, FDD, ADRs e Tracker, navegáveis entre si.
 - Exibe de forma visível o hash do commit de origem (o mesmo do Artefato 2).
 
-### Artefato 2 — Metadado de sincronização (`docs/site/docs-meta.json`)
+### Artefato 2: Metadado de sincronização (`docs/site/docs-meta.json`)
 
 Um arquivo JSON versionado que registra de qual ponto do código a documentação foi gerada. Campos obrigatórios:
 
@@ -267,12 +272,12 @@ Um arquivo JSON versionado que registra de qual ponto do código a documentaçã
 
 O `source_commit` é a âncora de sincronização: ele afirma "esta documentação reflete o código neste commit".
 
-### Artefato 3 — Mecanismo de auto-atualização
+### Artefato 3: Mecanismo de auto-atualização
 
-Um **único ponto de entrada reproduzível** — um script (ex.: `npm run docs:update`) **ou** um GitHub Action — com o código versionado no repositório. O contrato é fixo e deve executar exatamente estas etapas:
+Um **único ponto de entrada reproduzível** (um script, ex.: `npm run docs:update`, **ou** um GitHub Action) com o código versionado no repositório. O contrato é fixo e deve executar exatamente estas etapas:
 
 | Etapa | O que faz |
-| ----- | --------- |
+| --- | --- |
 | 1. Lê a âncora | Lê `source_commit` de `docs/site/docs-meta.json` |
 | 2. Calcula o delta | Roda `git diff <source_commit>..HEAD` para descobrir os arquivos de código alterados |
 | 3. Direciona pelo Tracker | Usa as linhas do Tracker com Fonte = `CODIGO` para mapear arquivos alterados → itens de documento afetados |
@@ -285,10 +290,10 @@ A etapa 3 é o que diferencia este mecanismo de uma regeneração cega: ele só 
 
 Você prova o mecanismo rodando-o sobre uma mudança de código **conhecida**, fornecida em `fase-2/`: uma nova transição na máquina de estados de pedidos, `SHIPPED → CANCELLED` (detalhes em `fase-2/README.md`). Crie uma seção **"Demonstração da Parte 2"** no README do processo registrando, nesta ordem:
 
-1. **Estado inicial** — o `source_commit` gravado antes da mudança.
-2. **A mudança** — a saída de `git apply fase-2/order-status-change.patch` e o commit resultante.
-3. **A execução** — o comando que disparou o mecanismo e o log/saída dele.
-4. **O resultado** — o diff dos documentos atualizados (trechos antes/depois) e o novo `source_commit`.
+1. **Estado inicial**: o `source_commit` gravado antes da mudança.
+2. **A mudança**: a saída de `git apply fase-2/order-status-change.patch` e o commit resultante.
+3. **A execução**: o comando que disparou o mecanismo e o log/saída dele.
+4. **O resultado**: o diff dos documentos atualizados (trechos antes/depois) e o novo `source_commit`.
 
 Como a mudança é conhecida, o resultado esperado é objetivo: depois da execução, os documentos precisam refletir que **um pedido `SHIPPED` agora pode ser `CANCELLED`**. Concretamente, ao menos o fluxo/contrato no FDD e o ADR da máquina de estados (e o evento/payload correspondente) devem mencionar essa nova transição, e nenhum documento pode continuar afirmando que `SHIPPED` só vai para `DELIVERED`.
 
@@ -296,15 +301,17 @@ Como a mudança é conhecida, o resultado esperado é objetivo: depois da execu�
 
 Aplicar o changeset da fase 2 é a **única** alteração de código permitida no desafio, é sancionada e fornecida por ele, e existe só para servir de gatilho desta demonstração. Fora isso, o código da aplicação (`src/`, `prisma/`, `tests/`) permanece intocado. Criar o tooling de documentação (gerador de HTML, script/Action de atualização, prompts) é parte esperada desta etapa.
 
-### Critérios de Aceite — Parte 2
+### Critérios de Aceite da Parte 2
 
-- [ ] `docs/site/` contém um HTML navegável gerado a partir dos Markdown da Parte 1, cobrindo PRD, RFC, FDD, ADRs e Tracker
-- [ ] O HTML exibe de forma visível o hash do commit de origem
-- [ ] `docs/site/docs-meta.json` existe e contém `source_commit` (hash real do repositório), `generated_at` e a lista de documentos
-- [ ] O código do mecanismo de atualização está versionado e tem um ponto de entrada reproduzível e documentado (script ou Action)
-- [ ] O mecanismo usa `git diff <source_commit>..HEAD` e o Tracker para direcionar a atualização, em vez de regenerar todos os documentos
-- [ ] A seção "Demonstração da Parte 2" no README registra os quatro itens exigidos (estado inicial, mudança, execução, resultado), com diffs e saídas reais
-- [ ] Após a demonstração, os documentos refletem a transição `SHIPPED → CANCELLED` e o `source_commit` gravado é igual ao commit que aplicou o changeset
+- ☐ `docs/site/` contém um HTML navegável gerado a partir dos Markdown da Parte 1, cobrindo PRD, RFC, FDD, ADRs e Tracker
+- ☐ O HTML exibe de forma visível o hash do commit de origem
+- ☐ `docs/site/docs-meta.json` existe e contém `source_commit` (hash real do repositório), `generated_at` e a lista de documentos
+- ☐ O código do mecanismo de atualização está versionado e tem um ponto de entrada reproduzível e documentado (script ou Action)
+- ☐ O mecanismo usa `git diff <source_commit>..HEAD` e o Tracker para direcionar a atualização, em vez de regenerar todos os documentos
+- ☐ A seção "Demonstração da Parte 2" no README registra os quatro itens exigidos (estado inicial, mudança, execução, resultado), com diffs e saídas reais
+- ☐ Após a demonstração, os documentos refletem a transição `SHIPPED → CANCELLED` e o `source_commit` gravado é igual ao commit que aplicou o changeset
+
+---
 
 ## Estrutura obrigatória do entregável
 
@@ -312,7 +319,7 @@ Aplicar o changeset da fase 2 é a **única** alteração de código permitida n
 .
 ├── README.md                              (substituído pelo aluno)
 ├── TRANSCRICAO.md                         (não alterar)
-├── fase-2/                                (changeset da Parte 2 — fornecido pelo desafio)
+├── fase-2/                                (changeset da Parte 2, fornecido pelo desafio)
 │   ├── README.md
 │   └── order-status-change.patch
 ├── docs/
@@ -327,13 +334,13 @@ Aplicar o changeset da fase 2 é a **única** alteração de código permitida n
 │   │   ├── ADR-004-titulo-curto.md
 │   │   ├── ADR-005-titulo-curto.md
 │   │   └── ... (até 8 ADRs)
-│   └── site/                              (Parte 2 — HTML + docs-meta.json, gerados pelo aluno)
+│   └── site/                              (Parte 2: HTML + docs-meta.json, gerados pelo aluno)
 │       ├── index.html
 │       └── docs-meta.json
-├── src/                                   (não alterar — exceto o changeset da fase 2, na Parte 2)
+├── src/                                   (não alterar, exceto o changeset da fase 2, na Parte 2)
 ├── prisma/                                (não alterar)
 ├── tests/                                 (não alterar)
-└── ... (demais arquivos do boilerplate; o mecanismo de atualização da Parte 2 — script ou Action — é versionado pelo aluno)
+└── ... (demais arquivos do boilerplate; o mecanismo de atualização da Parte 2, script ou Action, é versionado pelo aluno)
 ```
 
 A entrega deve ser feita como repositório público no GitHub, a partir de fork do repositório base do desafio.
@@ -355,8 +362,8 @@ O repositório base do desafio contém a aplicação completa, a transcrição e
 7. **Tracker**: monte em paralelo com os outros documentos ou no fim, varrendo os documentos prontos.
 8. **README do processo**: deixe por último, quando o processo já está completo e você pode documentá-lo com clareza.
 9. **Revisão final**: passe pela checklist de critérios de aceite item por item antes do push final.
-10. **Itere**: é esperado que o processo demande 3-5 ciclos de geração, revisão crítica, ajuste de prompt e nova geração. Se você gerou tudo de primeira sem ajustes, os documentos provavelmente estão genéricos demais.
-11. **Parte 2 — Documentação viva**: depois da Parte 1 fechada, renderize o pacote em HTML, monte o mecanismo de auto-atualização e rode a demonstração com o changeset da fase 2.
+10. **Itere**: é esperado que o processo demande 3 a 5 ciclos de geração, revisão crítica, ajuste de prompt e nova geração. Se você gerou tudo de primeira sem ajustes, os documentos provavelmente estão genéricos demais.
+11. **Parte 2 (Documentação viva)**: depois da Parte 1 fechada, renderize o pacote em HTML, monte o mecanismo de auto-atualização e rode a demonstração com o changeset da fase 2.
 
 ## Dicas Finais
 
